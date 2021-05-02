@@ -12,7 +12,7 @@ const addPier = async (req, res, next) => {
   }
 };
 
-const retrievePier = async (req, res, next) => {
+const getPier = async (req, res, next) => {
   try {
     const pier = "Pierdomenico";
     let theSameGreatPier = await PierModel.findOne({ name: pier });
@@ -29,4 +29,4 @@ const retrievePier = async (req, res, next) => {
   }
 };
 
-module.exports = { addPier, retrievePier };
+module.exports = { addPier, getPier };

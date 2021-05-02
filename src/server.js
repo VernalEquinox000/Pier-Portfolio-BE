@@ -3,6 +3,7 @@ const cors = require("cors");
 const listEndPoints = require("express-list-endpoints");
 const mongoose = require("mongoose");
 const pierRoutes = require("./routes/pierRoutes");
+const projectRoutes = require("./routes/projectRoutes");
 
 //ERROR HANDLERS
 const {
@@ -33,6 +34,7 @@ server.use(cors(corsOptions));
 server.use(express.json());
 
 pierRoutes(server); //user
+projectRoutes(server); //project
 
 //ERROR HANDLERS MIDDLEWARES
 server.use(badRequestHandler);
